@@ -1,54 +1,44 @@
-# DebaterWithCrewai Crew
+# Debater with Crewai
 
-Welcome to the DebaterWithCrewai Crew project, powered by [crewAI](https://crewai.com). This template is designed to help you set up a multi-agent AI system with ease, leveraging the powerful and flexible framework provided by crewAI. Our goal is to enable your agents to collaborate effectively on complex tasks, maximizing their collective intelligence and capabilities.
+DebaterWithCrewai is a template project for building a multi-agent debate system using [crewAI](https://crewai.com). This project demonstrates how to orchestrate multiple AI agents to debate a topic, judge the arguments, and output structured results. The codebase is modular and easily extensible for your own multi-agent workflows.
 
-## Installation
+---
 
-Ensure you have Python >=3.10 <3.14 installed on your system. This project uses [UV](https://docs.astral.sh/uv/) for dependency management and package handling, offering a seamless setup and execution experience.
+## Features
 
-First, if you haven't already, install uv:
+- **Multi-Agent Debate**: Agents are assigned roles (Debater, Judge) and collaborate on a debate task.
+- **Configurable Agents & Tasks**: Define agent personalities and task flows in YAML files.
+- **Structured Output**: Debate results are saved to markdown files for easy review.
+- **Separation of Logic**: Core logic is organized in `crew.py` and `main.py` for clarity and extensibility.
 
-```bash
-pip install uv
-```
+## How to Run (using crewAI CLI)
 
-Next, navigate to your project directory and install the dependencies:
+1. **Install crewAI and dependencies**  
+   Make sure you have Python 3.8+ installed.  
+   Install [crewAI](https://pypi.org/project/crewai/) and other dependencies:
 
-(Optional) Lock the dependencies and install them by using the CLI command:
-```bash
-crewai install
-```
-### Customizing
+   ```bash
+   uv tool install crewai
+   pip install -r requirements.txt
+   ```
 
-**Add your `OPENAI_API_KEY` into the `.env` file**
+2. **Configure your agents and tasks**  
+   Edit the YAML configuration files as needed (see `src/debater_with_crewai/crew.py` for details).
 
-- Modify `src/debater_with_crewai/config/agents.yaml` to define your agents
-- Modify `src/debater_with_crewai/config/tasks.yaml` to define your tasks
-- Modify `src/debater_with_crewai/crew.py` to add your own logic, tools and specific args
-- Modify `src/debater_with_crewai/main.py` to add custom inputs for your agents and tasks
+3. **Run the debate using the crewAI CLI**  
+   From the project root, run:
 
-## Running the Project
+   ```bash
+   crewai run src/debater_with_crewai/crew.py
+   ```
 
-To kickstart your crew of AI agents and begin task execution, run this from the root folder of your project:
+   This will launch the debate workflow using crewAI, and save the results in the `output/` directory.
 
-```bash
-$ crewai run
-```
+4. **Review the results**  
+   Open the markdown files in the `output/` folder to see the debate arguments and the judge's decision.
 
-This command initializes the debater-with-crewai Crew, assembling the agents and assigning them tasks as defined in your configuration.
 
-This example, unmodified, will run the create a `report.md` file with the output of a research on LLMs in the root folder.
 
-## Understanding Your Crew
+---
 
-The debater-with-crewai Crew is composed of multiple AI agents, each with unique roles, goals, and tools. These agents collaborate on a series of tasks, defined in `config/tasks.yaml`, leveraging their collective skills to achieve complex objectives. The `config/agents.yaml` file outlines the capabilities and configurations of each agent in your crew.
-
-## Support
-
-For support, questions, or feedback regarding the DebaterWithCrewai Crew or crewAI.
-- Visit our [documentation](https://docs.crewai.com)
-- Reach out to us through our [GitHub repository](https://github.com/joaomdmoura/crewai)
-- [Join our Discord](https://discord.com/invite/X4JWnZnxPb)
-- [Chat with our docs](https://chatg.pt/DWjSBZn)
-
-Let's create wonders together with the power and simplicity of crewAI.
+## Project Structure
