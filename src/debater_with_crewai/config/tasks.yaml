@@ -1,0 +1,25 @@
+propose_debate_task:
+  description: >
+    Research and propose a compelling debate information related to the topic {topic}.
+    Gather and synthesize the most current, interesting, and relevant information to support the debate.
+  expected_output: >
+    A list of 10 concise bullet points highlighting the most significant and up-to-date facts, arguments, or developments about {topic}.
+  agent: debater
+
+oppose_debate_task:
+  description: >
+    Construct a detailed and well-reasoned opposition to the proposed debate topic in {topic}.
+    Ensure your arguments are thorough, logical, and address the main points raised on the topic {topic}.
+  expected_output: >
+    A comprehensive markdown-formatted debate, clearly structured with main arguments and counterarguments.
+    Do not include code block markers (no '```').
+  agent: debater
+
+decide_winner_task:
+  description: >
+    Critically evaluate the debate by assessing the strength, clarity, and relevance of the arguments presented by both sides.
+    Provide constructive feedback and highlight the most persuasive points regarding the topic {topic} and make judgement.
+  expected_output: >
+    A detailed markdown-formatted review of the debate that summarizes the key arguments, outlines strengths and weaknesses, and provides a final judgment.
+    Do not include code block markers (no '```').
+  agent: judge
