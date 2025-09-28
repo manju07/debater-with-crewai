@@ -1,4 +1,4 @@
-# Debater with Crewai
+# Debater with CrewAI
 
 DebaterWithCrewai is a template project for building a multi-agent debate system using [crewAI](https://crewai.com). This project demonstrates how to orchestrate multiple AI agents to debate a topic, judge the arguments, and output structured results. The codebase is modular and easily extensible for your own multi-agent workflows.
 
