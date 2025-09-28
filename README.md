@@ -4,6 +4,18 @@ DebaterWithCrewai is a template project for building a multi-agent debate system
 
 ---
 
+## Tech Stack
+
+- **Python 3.8+**: Core programming language for all logic and orchestration.
+- **[crewAI](https://crewai.com)**: Framework for building and running multi-agent workflows.
+- **PyYAML**: For parsing agent and task configuration files.
+- **Markdown**: Output format for debate results.
+- **CLI Tools**: Uses the `crewai` command-line interface for workflow execution.
+
+Optional/Recommended:
+- **uv**: Fast Python package installer (alternative to pip).
+- **VSCode/Jupyter**: For code editing and experimentation.
+
 ## Features
 
 - **Multi-Agent Debate**: Agents are assigned roles (Debater, Judge) and collaborate on a debate task.
