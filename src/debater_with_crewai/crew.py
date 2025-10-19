@@ -21,9 +21,16 @@ class DebaterWithCrewai():
     # https://docs.crewai.com/concepts/agents#agent-tools
     
     @agent
-    def debater(self) -> Agent:
+    def proponent_debater(self) -> Agent:
         return Agent(
-            config=self.agents_config['debater'], # type: ignore[index]
+            config=self.agents_config['proponent_debater'], # type: ignore[index]
+            verbose=True
+        )
+    
+    @agent
+    def opponent_debater(self) -> Agent:
+        return Agent(
+            config=self.agents_config['opponent_debater'], # type: ignore[index]
             verbose=True
         )
     

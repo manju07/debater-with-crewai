@@ -4,7 +4,7 @@ propose_debate_task:
     Gather and synthesize the most current, interesting, and relevant information to support the debate.
   expected_output: >
     A list of 10 concise bullet points highlighting the most significant and up-to-date facts, arguments, or developments about {topic}.
-  agent: debater
+  agent: proponent_debater
 
 oppose_debate_task:
   description: >
@@ -13,7 +13,7 @@ oppose_debate_task:
   expected_output: >
     A comprehensive markdown-formatted debate, clearly structured with main arguments and counterarguments.
     Do not include code block markers (no '```').
-  agent: debater
+  agent: opponent_debater
 
 decide_winner_task:
   description: >

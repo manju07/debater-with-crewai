@@ -19,7 +19,7 @@ def run():
     """
 
     inputs = {
-        'topic': 'Buy Apple or Google?',
+        'topic': 'Suggest on buying Apple stock?',
     }
     
     try:

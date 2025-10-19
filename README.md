@@ -41,7 +41,7 @@ Optional/Recommended:
    From the project root, run:
 
    ```bash
-   crewai run src/debater_with_crewai/crew.py
+   crewai run
    ```
 
    This will launch the debate workflow using crewAI, and save the results in the `output/` directory.
